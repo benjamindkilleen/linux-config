@@ -59,6 +59,10 @@ sudo reboot
 
     sudo apt install brave-browser
    ```
+   
+   Add the
+   [StayFocused](https://chrome.google.com/webstore/detail/stayfocusd/laankejkbhbdhmipfmgcngdelahlfoji?hl=en)
+   extension (if it is not added automatically) and import settings from `StayFocused_config.json`.
 
 3. Install github command line:
    ```bash 
@@ -82,6 +86,11 @@ sudo reboot
    xclip -sel clip < ~/.ssh/id_rsa.pub
    ```
    
+   You will also need to tell github who you are:
+   ```bash
+   git config --global user.email "you@example.com"
+   git config --global user.name "Your Name"
+   ```
       
 4. Download [powerlevel10k theme](https://github.com/romkatv/powerlevel10k). 
    ```bash
@@ -149,9 +158,15 @@ sudo reboot
 
 9. Change terminal shortcuts to stop zoom with `Ctrl+-` behavior. Make it `Ctrl+_`
 
-10. Install [Anaconda](https://www.anaconda.com/products/individual) for Linux / Python 3.8.
+10. Install [Anaconda](https://www.anaconda.com/products/individual) for Linux / Python 3.8. 
     ```
     cd ~/Downloads
-    wget 
+    wget https://repo.anaconda.com/archive/Anaconda3-2020.07-Linux-x86_64.sh
+    sh Anaconda3-2020.07-Linux-x86_64.sh
+    cd
     ```
+    (Link may not be up to date.)
+    
+    Hopefully the part in `home/.zshrc`, which is now soft-linked to your home directory, matches
+    what anaconda writes to .bashrc automatically, but you can check to make sure.
 
