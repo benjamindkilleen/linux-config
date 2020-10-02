@@ -37,16 +37,72 @@ sudo reboot
    ```
    without having to install software.
    
-   2. Set up the shell.
+   2. Set up the shell with zsh.
    ```bash
    sudo apt install zsh
+   ```
+   and oh-my-zsh
+   ```
    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
    ```
+   Log out and log back in.
    
-   3. Install github command line:
+8. Install Brave browser and add the device to my sync chain.
+   ```bash
+   sudo apt install apt-transport-https curl
+
+    curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+    echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+    sudo apt update
+
+    sudo apt install brave-browser
+   ```
+
+3. Install github command line:
    ```bash 
    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
    sudo apt-add-repository https://cli.github.com/packages
    sudo apt update
    sudo apt install gh
    ```
+   And authenticate yourself with:
+   ```
+   gh auth login
+   ```
+   
+   [Generate ssh key](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+   ```
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+   and [add it to Github](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) 
+   ```
+   sudo apt-get install xclip
+   xclip -sel clip < ~/.ssh/id_rsa.pub
+   ```
+   
+      
+4. Download [powerlevel10k theme](https://github.com/romkatv/powerlevel10k). 
+   ```bash
+   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+   ```
+   We will set the theme after downloading and linking config files.
+      
+
+7. Clone and link config files
+   ```
+   cd
+   gh repo clone benjamindkilleen/linux-config
+   cd linux-config
+   
+   ```
+
+6. Install Emacs
+   ```bash
+   sudo add-apt-repository ppa:kelleyk/emacs
+   sudo apt update
+   sudo apt install emacs26
+   ```
+   
+   
