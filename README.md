@@ -108,17 +108,21 @@ sudo reboot
    ```bash
    cd
    gh repo clone benjamindkilleen/linux-config
-   for FILE in $HOME/linux-config/home
+   for FILE in $HOME/linux-config/home/.*
    do
-       echo "Linking $FILE -> $(pwd)/$(basename -- $FILE)"
-       ln -s $FILE "$(basename -- $FILE)"
+       f="$(basename -- $FILE)"
+       echo "Linking $FILE -> $(pwd)/$f"
+       rm $f
+       ln -s $FILE $f
    done
    
    cd .config
-   for FILE in $HOME/linux-config/.config
+   for FILE in $HOME/linux-config/.config/*
    do
-       echo "Linking $FILE -> $(pwd)/$(basename -- $FILE)"
-       ln -s $FILE "$(basename -- $FILE)"
+       f="$(basename -- $FILE)"
+       echo "Linking $FILE -> $(pwd)/$f"
+       rm $f
+       ln -s $FILE $f
    done
    ```
     
