@@ -94,7 +94,7 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # Define the path
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Library/Tex/texbin
 export PATH=$PATH:/usr/local/opt/ruby/bin
 
