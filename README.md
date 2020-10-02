@@ -97,6 +97,13 @@ sudo reboot
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
    ```
    We will set the theme after downloading and linking config files.
+   
+5. Download [conda-zsh-completion](https://github.com/esc/conda-zsh-completion)
+   ```
+   git clone --depth=1 https://github.com/esc/conda-zsh-completion.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/conda-zsh-completion
+   ```
+   
+   This plugin is loaded by the .zshrc
       
 
 6. Download emacs config:
@@ -169,4 +176,5 @@ sudo reboot
     
     Hopefully the part in `home/.zshrc`, which is now soft-linked to your home directory, matches
     what anaconda writes to .bashrc automatically, but you can check to make sure.
+    
 
