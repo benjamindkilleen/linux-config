@@ -6,8 +6,8 @@ export PROJECTS="$HOME/projects"
 alias projects="$PROJECTS/"
 
 # emacs aliases
-alias e="emacs -nw --no-splash"
-alias em="emacs --no-splash"
+alias e="emacs26 -nw --no-splash"
+alias em="emacs26 --no-splash"
 
 ### local Variables:
 ### mode: Shell-script[zsh]

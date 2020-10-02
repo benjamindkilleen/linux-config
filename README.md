@@ -90,19 +90,42 @@ sudo reboot
    We will set the theme after downloading and linking config files.
       
 
-7. Clone and link config files
-   ```
+6. Install Emacs
+   Download emacs config:
+   ```bash
    cd
-   gh repo clone benjamindkilleen/linux-config
-   cd linux-config
-   
+   gh repo clone benjamindkilleen/.emacs.d
    ```
 
-6. Install Emacs
    ```bash
    sudo add-apt-repository ppa:kelleyk/emacs
    sudo apt update
    sudo apt install emacs26
    ```
    
+   Open Emacs and resolve uninstalled packages. (TODO: automate)
+
+
+7. Clone and link config files
+   ```bash
+   cd
+   gh repo clone benjamindkilleen/linux-config
+   for FILE in $HOME/linux-config/home
+   do
+       echo "Linking $FILE -> $HOME/$(basename -- $FILE)"
+       ln -s $FILE "$HOME/$(basename -- $FILE)"
+   done
    
+   for FILE in $HOME/linux-config/.config
+   do
+       echo "Linking $FILE -> $HOME/.config/$(basename -- $FILE)"
+       ln -s $FILE "$HOME/$(basename -- $FILE)"
+   done
+   ```
+    
+    And open a new terminal window.
+    
+8. Install byobu. Useful for running processes in the background, and better than tmux.
+   ```
+   sudo apt-get install byobu
+   ```
