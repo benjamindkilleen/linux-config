@@ -90,20 +90,18 @@ sudo reboot
    We will set the theme after downloading and linking config files.
       
 
-6. Install Emacs
-   Download emacs config:
+6. Download emacs config:
    ```bash
    cd
    gh repo clone benjamindkilleen/.emacs.d
-   ```
-
-   ```bash
-   sudo add-apt-repository ppa:kelleyk/emacs
-   sudo apt update
-   sudo apt install emacs26
+   cd .emacs.d
+   git checkout alderaan
+   cd
    ```
    
    Open Emacs and resolve uninstalled packages. (TODO: automate)
+   
+   (Ubuntu 20 comes with Emacs 26 pre-installed.)
 
 
 7. Clone and link config files
