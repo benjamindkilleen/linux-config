@@ -1,0 +1,14 @@
+
+# Big directories
+export PROJECTS="$HOME/projects"
+
+# main directory aliases
+alias projects="$PROJECTS/"
+
+# emacs aliases
+alias e="emacs -nw --no-splash"
+alias em="emacs --no-splash"
+
+### local Variables:
+### mode: Shell-script[zsh]
+### End:

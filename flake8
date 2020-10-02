@@ -1,0 +1,4 @@
+[flake8]
+ignore = E111,E114,W503,E129,E121,W293,W291
+max-line-length = 120
+indent-size = 2
