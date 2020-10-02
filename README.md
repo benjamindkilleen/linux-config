@@ -98,10 +98,24 @@ sudo reboot
    git checkout alderaan
    cd
    ```
-   
+   (Ubuntu 20 comes with Emacs 26 pre-installed.)
+  
    Open Emacs and resolve uninstalled packages. (TODO: automate)
    
-   (Ubuntu 20 comes with Emacs 26 pre-installed.)
+   ```
+   zenburn-theme
+   smart-mode-line
+   haskell-mode
+   auto-complete
+   better-defaults
+   py-autopep8
+   sphinx-doc
+   auto-package-update
+   smooth-scroll
+   highlight-numbers
+   ```
+   
+   And run `elpy-config` and answer `y` to automatically install dependencies.
 
 
 7. Clone and link config files
@@ -126,9 +140,18 @@ sudo reboot
    done
    ```
     
-    And open a new terminal window.
+    And open a new terminal window. You will be prompted with the `powerlevel10k` config options.
     
 8. Install byobu. Useful for running processes in the background, and better than tmux.
    ```
    sudo apt-get install byobu
    ```
+
+9. Change terminal shortcuts to stop zoom with `Ctrl+-` behavior. Make it `Ctrl+_`
+
+10. Install [Anaconda](https://www.anaconda.com/products/individual) for Linux / Python 3.8.
+    ```
+    cd ~/Downloads
+    wget 
+    ```
+
