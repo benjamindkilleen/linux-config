@@ -178,3 +178,37 @@ sudo reboot
     what anaconda writes to .bashrc automatically, but you can check to make sure.
     
 
+
+11. Other random pip insalls that I like:
+
+    ```
+    python3 -m pip install -U pip
+    pip install gpustat
+    ```
+    
+12. Allow incoming ssh connections:
+    ```
+    sudo apt update
+    sudo apt install openssh-server
+    ```
+    
+    and, if necessary, disable the firewall for ssh
+    ```
+    sudo ufw allow ssh
+    ```
+    
+    If you like, you can add the workstation's public key 
+    * Generate the key if you don't have one on your remote machine (i.e. a laptop, not the new ubuntu install):
+      ```
+      ssh-keygen -t rsa
+      ```
+    * Make ssh dir.
+      ```
+      ssh user@workstation.address mkdir -p .ssh
+      ```
+    
+12. Install vscode for remote access:
+    ```
+    ...
+    ```
+    
