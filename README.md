@@ -110,14 +110,15 @@ sudo reboot
    gh repo clone benjamindkilleen/linux-config
    for FILE in $HOME/linux-config/home
    do
-       echo "Linking $FILE -> $HOME/$(basename -- $FILE)"
-       ln -s $FILE "$HOME/$(basename -- $FILE)"
+       echo "Linking $FILE -> $(pwd)/$(basename -- $FILE)"
+       ln -s $FILE "$(basename -- $FILE)"
    done
    
+   cd .config
    for FILE in $HOME/linux-config/.config
    do
-       echo "Linking $FILE -> $HOME/.config/$(basename -- $FILE)"
-       ln -s $FILE "$HOME/$(basename -- $FILE)"
+       echo "Linking $FILE -> $(pwd)/$(basename -- $FILE)"
+       ln -s $FILE "$(basename -- $FILE)"
    done
    ```
     
