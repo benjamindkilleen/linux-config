@@ -101,7 +101,7 @@ export PATH=$PATH:/usr/local/opt/ruby/bin
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # byobu:
-export BYOBU_PREFIX=/usr/local
+# export BYOBU_PREFIX=/usr/local
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
