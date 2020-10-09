@@ -206,7 +206,25 @@ sudo reboot
       ```
       ssh user@workstation.address mkdir -p .ssh
       ```
-    
+
+12. Set up X-forwarding
+
+Using [this](https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely) answer.
+
+On the ubuntu machine, make sure `/etc/ssh/sshd_config` contains
+```
+X11Forwarding yes
+X11DisplayOffset 10
+```
+most likely the second line is commented out.
+
+To adopt these changes, run:
+```
+cat /var/run/sshd.pid | xargs kill -1
+```
+
+
+
 12. Install vscode for remote access:
     ```
     ...
