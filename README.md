@@ -97,6 +97,13 @@ sudo reboot
    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
    ```
    We will set the theme after downloading and linking config files.
+   
+5. Download [conda-zsh-completion](https://github.com/esc/conda-zsh-completion)
+   ```
+   git clone --depth=1 https://github.com/esc/conda-zsh-completion.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/conda-zsh-completion
+   ```
+   
+   This plugin is loaded by the .zshrc
       
 
 6. Download emacs config:
@@ -169,4 +176,57 @@ sudo reboot
     
     Hopefully the part in `home/.zshrc`, which is now soft-linked to your home directory, matches
     what anaconda writes to .bashrc automatically, but you can check to make sure.
+    
 
+
+11. Other random pip insalls that I like:
+
+    ```
+    python3 -m pip install -U pip
+    pip install gpustat
+    ```
+    
+12. Allow incoming ssh connections:
+    ```
+    sudo apt update
+    sudo apt install openssh-server
+    ```
+    
+    and, if necessary, disable the firewall for ssh
+    ```
+    sudo ufw allow ssh
+    ```
+    
+    If you like, you can add the workstation's public key 
+    * Generate the key if you don't have one on your remote machine (i.e. a laptop, not the new ubuntu install):
+      ```
+      ssh-keygen -t rsa
+      ```
+    * Make ssh dir.
+      ```
+      ssh user@workstation.address mkdir -p .ssh
+      ```
+
+12. Set up X-forwarding
+
+Using [this](https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely) answer.
+
+On the ubuntu machine, make sure `/etc/ssh/sshd_config` contains
+```
+X11Forwarding yes
+X11DisplayOffset 10
+```
+most likely the second line is commented out.
+
+To adopt these changes, run:
+```
+cat /var/run/sshd.pid | xargs kill -1
+```
+
+
+
+12. Install vscode for remote access:
+    ```
+    ...
+    ```
+    
