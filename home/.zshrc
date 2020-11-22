@@ -97,6 +97,7 @@ fi
 export PATH=$HOME/.local/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:/Library/Tex/texbin
 export PATH=$PATH:/usr/local/opt/ruby/bin
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
