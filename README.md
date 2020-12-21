@@ -230,3 +230,6 @@ cat /var/run/sshd.pid | xargs kill -1
     ...
     ```
     
+### Other Items
+
+* Reliable remote desktop: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-20-04
