@@ -223,11 +223,9 @@ To adopt these changes, run:
 cat /var/run/sshd.pid | xargs kill -1
 ```
 
-
-
-12. Install vscode for remote access:
+12. Install Docker with GPU:
     ```
-    ...
+    sudo apt-get install docker.io nvidia-container-toolkit
     ```
     
 ### Other Items
