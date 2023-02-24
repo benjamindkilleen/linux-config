@@ -220,6 +220,16 @@ To adopt these changes, run:
 cat /var/run/sshd.pid | xargs kill -1
 ```
 
+18. OneDrive for ubuntu
+
+```
+sudo apt update
+sudo add-apt-repository ppa:yann1ck/onedrive
+sudo apt install onedrive
+```
+
+And run `onedrive` to authenticate. You will get a link; click on that, log in, and copy the URL it takes you to. Paste that back in the terminal.
+
 12. Install Docker with GPU:
     ```
     sudo apt-get install docker.io nvidia-container-toolkit
