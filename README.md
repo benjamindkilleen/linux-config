@@ -127,7 +127,7 @@ sudo reboot
 
     ```bash
     cd
-    gh repo clone benjamindkilleen/linux-config
+    git clone git@github.com:benjamindkilleen/linux-config.git
     for FILE in $HOME/linux-config/home/.*
     do
         f="$(basename -- $FILE)"
